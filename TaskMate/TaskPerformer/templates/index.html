@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{%  load static  %}
+{% block title %}
+    <title>Welcome to TaskMate</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-4">
+                
+                <img class="border border-success" src="{% static 'images/notess2.jpg' %}" alg="notes" width="360" height="250" > 
+            </div>
+
+            <div class="col-lg-4">
+                <img  class="border border-success" src="{% static 'images/notes.jpg' %}" alg="notes" width="360" height="250" > 
+
+            </div>
+
+            <div class="col-lg-4">
+                <img class="border border-success" src="{% static 'images/notes3.jpg' %}" alg="notes" width="360" height="250" > 
+
+            </div>
+        </div>
+        <div class="row  mt-5">
+            <p class="font-weight-normal">This site can help you to remember your task either pending or completed.</p>
+        </div>
+         <div class="row  mt-5">
+            <div class="col-lg-5">
+            </div>
+            <div class="col-lg-7">
+            <a href="{% url 'todolist' %}"><button type="button" class="btn btn-outline-success">Let's get started..</button></a>
+            </div>            
+        </div>
+    </div>
+{% endblock content %}

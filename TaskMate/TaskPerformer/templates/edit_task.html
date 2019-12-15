@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Edit Task-TaskMate</title>
+{% endblock title %}
+
+{% block content %}
+    </br></br></br></br>
+    <div class="container">
+        <form method="POST" class="row">
+
+            {% csrf_token %}
+            <label class="col-lg-2">Your Task</label>
+            <input type="text" class="form-control col-lg-7" name="task" value="{{ task_obj.task }}"  id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="hidden" name="done" value="{{task_obj.id}}" >
+            <div class="col-lg-1"></div>
+            <button type="submit" class="btn btn-primary col-lg-2">Update Task</button>
+
+        </form>
+
+    </div>
+
+{% endblock content %}
